@@ -1,3 +1,4 @@
+//https://programmers.co.kr/learn/courses/30/lessons/42840
 function solution(answers) {
   const answer = [];
   const a = [1, 2, 3, 4, 5];
@@ -8,13 +9,16 @@ function solution(answers) {
   for (let i = 0, answerslength = answers.length; i < answerslength; i++) {
     if (answers[i] === a[i % 5]) {
       count[0]++;
-    } else if (answers[i] === b[i % 8]) {
+    }
+    if (answers[i] === b[i % 8]) {
       count[1]++;
-    } else if (answers[i] === c[i % 10]) {
+    }
+    if (answers[i] === c[i % 10]) {
       count[2]++;
     }
   }
 
+  console.log(count);
   let max = 0;
   for (let i = 0; i < count.length; i++) {
     if (count[i] > max) max = count[i];
@@ -22,9 +26,10 @@ function solution(answers) {
   for (let i = 0; i < count.length; i++) {
     if (count[i] === max) answer.push(i + 1);
   }
+  console.log(answer);
   return answer;
 }
 
-const answers = [5, 3, 3, 3];
+const answers = [1, 3, 2, 4, 2];
 
 solution(answers);
