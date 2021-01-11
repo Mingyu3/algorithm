@@ -1,3 +1,4 @@
+//https://programmers.co.kr/learn/courses/30/lessons/42840
 function solution(answers) {
   const answer = [];
   const a = [1, 2, 3, 4, 5];
@@ -18,6 +19,7 @@ function solution(answers) {
   }
   console.log(count);
 
+  console.log(count);
   let max = 0;
   for (let i = 0; i < count.length; i++) {
     if (count[i] > max) max = count[i];
@@ -26,7 +28,10 @@ function solution(answers) {
   for (let i = 0; i < count.length; i++) {
     if (count[i] === max) answer.push(i + 1);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4bd09f5a89164ffeafaa948e10c4450189409c4a
   console.log(answer);
   return answer;
 }
