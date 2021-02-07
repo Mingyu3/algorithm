@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>출력결과</title>
+	</head>
+	<body>
+		<script>
+			function solution(s) {
+				let answer = 'YES';
+				const _s = s.toLowerCase();
+				// const n = s.length;
+				// for (let i = 0; i < Math.floor(n / 2); i++) {
+				// 	if (_s[i] !== _s[n - i - 1]) return 'NO';
+				// }
+				if (_s.split('').reverse().join('') !== _s) return 'NO';
+
+				return answer;
+			}
+
+			let str = 'ABCBB';
+			console.log(solution(str));
+		</script>
+	</body>
+</html>
