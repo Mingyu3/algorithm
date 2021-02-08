@@ -6,19 +6,24 @@
 	<body>
 		<script>
 			function solution(str) {
-				// let answer = '';
+				let answer = '';
 				// const s = str.replace(/[^0-9]/g, '');
-				// let flag = 1;
 				// for (let x of s) {
-				// 	if (parseInt(x) !== 0) {
-				// 		flag = 0;
-				// 	}
-				// 	if (flag === 0) answer += x;
+				// 	answer += x;
 				// }
-				return parseInt(answer);
+
+				// for (let x of str) {
+				// 	if (!isNaN(x)) answer += x;
+				// }
+
+				for (let x of str) {
+					if (!isNaN(x)) answer = answer * 10 + Number(x);
+				}
+				// return parseInt(answer);
+				return answer;
 			}
 
-			let str = 'g0en2T0s8eSoft';
+			let str = 'g00en2T0s8eSoft';
 			console.log(solution(str));
 		</script>
 	</body>
