@@ -6,6 +6,24 @@
 	<body>
 		<script>
 			function solution(n, arr) {
+				let answer,
+					max = Number.MIN_SAFE_INTEGER;
+				for (let x of arr) {
+					let sum = String(x)
+						.split('')
+						.reduce((a, b) => a + Number(b), 0);
+					// temp = x;
+					// while (temp) {
+					// 	sum += temp % 10;
+					// 	temp = Math.floor(temp / 10);
+					// }
+					if (sum > max) {
+						max = sum;
+						answer = x;
+					} else if (sum === max) {
+						if (answer < x) answer = x;
+					}
+				}
 				return answer;
 			}
 
