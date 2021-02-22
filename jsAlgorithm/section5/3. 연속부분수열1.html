@@ -18,12 +18,14 @@
 				// 		}
 				// 	}
 				// }
-				let answer = (lf = sum = 0);
-				for (let rf = 0; rf < arr.length; rf++) {
-					sum += arr[rf];
+				let answer = 0,
+					lt = 0,
+					sum = 0;
+				for (let rt = 0; rt < arr.length; rt++) {
+					sum += arr[rt];
 					if (sum === m) answer++;
 					while (sum >= m) {
-						sum -= arr[lf++];
+						sum -= arr[lt++];
 						if (sum === m) answer++;
 					}
 				}
