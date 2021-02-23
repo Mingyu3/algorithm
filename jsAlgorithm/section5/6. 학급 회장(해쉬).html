@@ -6,6 +6,25 @@
 	<body>
 		<script>
 			function solution(s) {
+				let answer;
+				let max = Number.MIN_SAFE_INTEGER;
+				let stringHash = new Map();
+				for (let x of s) {
+					if (stringHash.has(x)) stringHash.set(x, stringHash.get(x) + 1);
+					else stringHash.set(x, 1);
+				}
+				for (let [key, value] of stringHash) {
+					if (value > max) {
+						max = value;
+						answer = key;
+					}
+				}
+				// stringHash.forEach((value, key) => {
+				// if (value > max) {
+				// 	max = value;
+				// 	answer = key;
+				// }
+				// });
 				return answer;
 			}
 
